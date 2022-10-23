@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 def initialize():
     if 'color1' not in st.session_state:
@@ -12,6 +13,8 @@ initialize()
 
 color1 = st.session_state.color1
 color2 = st.session_state.color2
+
+st.button(f'time={time.time()%10}, c1={color1}, ss.c1={st.session_state.color1}, c2={color2}, ss.c2={st.session_state.color2}', key=str(time.time()))
 
 def set_color(color, player):
     if player == 1:
