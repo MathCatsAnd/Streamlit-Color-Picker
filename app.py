@@ -13,16 +13,16 @@ initialize()
 color1 = st.session_state.color1
 color2 = st.session_state.color2
 
-def reset():
-    st.session_state.color1 = '#3A5683'
-    st.session_state.color2 = '#73956F'
-    return
-
 def set_color(color, player):
     if player == 1:
         st.session_state.color1 = color
     else:
         st.session_state.color2 = color
+    return
+
+def reset():
+    set_color('#3A5683',1)
+    set_color('#73956F',2)
     return
 
 st.button('reset', key='reset', on_click = reset)
