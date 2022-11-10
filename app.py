@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import pandas as pd
 
 def initialize():
     if 'color1' not in st.session_state:
