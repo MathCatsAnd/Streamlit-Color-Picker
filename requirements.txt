@@ -1,3 +1,1 @@
- libxml2-dev
- libsxlt-dev
- lxml
+lxml
